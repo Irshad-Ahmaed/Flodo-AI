@@ -2,7 +2,6 @@
 .DS_Store
 Thumbs.db
 frontend
-backend
 # Editors
 .idea/
 .vscode/
