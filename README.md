@@ -109,14 +109,23 @@ Make sure the backend is running before launching the frontend.
 One technical decision I’m proud of is keeping blocked-task state computed on the backend instead of storing a separate flag. This keeps the UI simple and ensures the blocked styling always reflects the latest blocker status.
 
 ## AI Usage Report
-AI tools were used to accelerate development, debugging, and code review.
+I used ChatGPT during the assignment to speed up planning, implementation review, debugging, and cleanup.
 
-Helpful uses:
-- refining the implementation plan
-- reviewing backend API behavior and tests
-- identifying edge cases around blocking logic, API responses, and frontend/backend integration
-- helping structure the Flutter frontend around the assignment requirements
+Most useful ways ChatGPT helped:
+- breaking the assignment into a practical implementation plan before coding
+- keeping the scope aligned to exactly what the assignment asked for: core requirements + Track A + one stretch goal
+- reviewing backend API behavior, validation, and tests
+- identifying edge cases around blocked tasks, dependency handling, and API response shape
+- helping structure the Flutter frontend around the backend contract
+- checking submission readiness such as README content, ignored files, and cleanup
+
+Useful pattern for completing the assignment with ChatGPT:
+- start by converting the assignment into a clear build plan
+- choose the track and only one stretch goal early
+- implement backend and frontend in small verified steps
+- use ChatGPT for code review after each major piece, not only for code generation
+- use it to check edge cases, requirement coverage, and missing tests before submission
 
 Example of bad AI output and fix:
-- One generated backend validation version allowed a task to indirectly block itself because the self-reference check was written incorrectly.
+- One generated backend validation version allowed a task to block itself because the self-reference check was written incorrectly.
 - I fixed it by correcting the validation logic and adding an API regression test to cover self-blocking updates.
